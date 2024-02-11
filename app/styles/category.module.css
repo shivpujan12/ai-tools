@@ -20,7 +20,7 @@
 }
 
 .categoryContent::-webkit-scrollbar{
-  border: 0px;
+  display: none;
 }
 
 .actions{
