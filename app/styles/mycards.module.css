@@ -6,6 +6,10 @@
     box-shadow: 3px 7px rgba(231, 231, 231, 0.247);
     margin-left: 12px;
     margin-right: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .myCard:hover{

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../styles/sidnav.module.css";
 import { unstable_noStore as noStore } from 'next/cache';
 export default async function SideNav() {
@@ -11,7 +12,7 @@ export default async function SideNav() {
         data.map((d:any,i:any)=>{
             console.log(Object.values(d));
             return (
-                <div key={i} className={`${styles.category}`}>{Object.keys(d)}</div>
+                <div key={i} className={`${styles.category} mb-3`}><Link className="text-decoration-none text-black" href={`#${Object.keys(d)}`} >{Object.keys(d)}</Link></div>
             )
         })
       }

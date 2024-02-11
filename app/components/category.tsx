@@ -18,7 +18,7 @@ export default function Category(props: any) {
   const containerRef = useRef();
 
   return (
-    <div className={style.category}>
+    <div id={title} className={style.category}>
       <div className="display-6"> {title} </div>
 
       <div className={`${style.cardContainer}`} >
