@@ -1,0 +1,13 @@
+.myCard{
+    min-width: 350px;
+    min-height: 300px;
+    background-color: white;
+    border: 1px solid rgba(195, 195, 195, 0.162);
+    box-shadow: 3px 7px rgba(231, 231, 231, 0.247);
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  
+  .myCard:hover{
+    cursor: pointer;
+  }
