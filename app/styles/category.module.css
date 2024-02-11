@@ -1,0 +1,46 @@
+.category {
+}
+
+.cardContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.categoryContent{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  overscroll-behavior-inline: contain;
+}
+
+.categoryContent::-webkit-scrollbar{
+  display: none;
+}
+
+.actions{
+  width: 77%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(150px);
+}
+
+.actions img {
+  cursor: pointer;
+}
+
+.snapsInline {
+  scroll-snap-type: inline mandatory;
+}
+
+.snapsInline > * {
+  scroll-snap-align: start;
+}

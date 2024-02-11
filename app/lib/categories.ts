@@ -1,0 +1,1 @@
+export const data = ["chatgpt", "GAN", "something", "helloworld","chatgpt", "GAN", "something", "helloworld","chatgpt", "GAN", "something", "helloworld"];
