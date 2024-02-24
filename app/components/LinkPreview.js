@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import MyImageComponent from "@/app/components/MyImageComponent";
 
 function LinkPreview({ url, handleTitle, handleDesc  }) {
     const [previewData, setPreviewData] = useState(null);
@@ -42,7 +43,8 @@ function LinkPreview({ url, handleTitle, handleDesc  }) {
 
     return (
         <div onClick={handleClick} style={{ cursor: 'pointer' }}>
-            {previewData.image && <img src={previewData.image} alt="Link Preview" />}
+            {previewData.image && <MyImageComponent src={previewData.image} alt={"Link Preview"} />
+            }
         </div>
     );
 }
