@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@500&display=swap');
-.navbar{
+
+.navbar {
     width: 100%;
     position: fixed;
     z-index: 1;
-    background-color: #303030c5;
     /* From https://css.glass */
-background: rgba(203, 203, 203, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(203, 203, 203, 0.3);
-font-family: 'Onest', sans-serif;
+    background: rgba(182, 182, 182, 0.2);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    font-family: 'Onest', sans-serif;
 }

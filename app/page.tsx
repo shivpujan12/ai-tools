@@ -3,11 +3,10 @@ import style from "./page.module.css";
 import NavBar from "./components/navbar";
 import { unstable_noStore as noStore } from "next/cache";
 import Category, { Tool } from "./components/category";
-import { useEffect } from "react";
 
 export default async function Home() {
   noStore();
-  const req = await fetch(`http://localhost:3001/data.json`);
+  const req = await fetch(`http://localhost:3000/data.json`);
   const data = await req.json();
 
   return (

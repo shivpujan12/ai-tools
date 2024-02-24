@@ -18,7 +18,7 @@ export default function Category(props: any) {
   const containerRef = useRef();
 
   return (
-    <div id={title} className={style.category}>
+    <div id={title} className={`${style.category}`}>
       <div className="display-6"> {title} </div>
 
       <div className={`${style.cardContainer}`} >
@@ -26,7 +26,7 @@ export default function Category(props: any) {
           <div
             onClick={()=>{
               console.log("back clicked");
-              containerRef.current.scrollLeft += 200;
+              containerRef.current.scrollLeft -= 200;
             }}
             style={{ backgroundColor: "white", borderRadius: "50%" }}
           >
@@ -35,7 +35,7 @@ export default function Category(props: any) {
           <div
             onClick={()=>{
               console.log("forward clicked")
-              containerRef.current.scrollLeft -= 200;
+              containerRef.current.scrollLeft += 200;
             }}
             style={{ backgroundColor: "white", borderRadius: "50%" }}
           >

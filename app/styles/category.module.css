@@ -3,6 +3,7 @@
 .category {
   text-align: start;
   font-family: 'Onest', sans-serif;
+  margin-top: 10px;
 }
 
 .cardContainer{
@@ -15,12 +16,11 @@
   display: flex;
   flex-direction: row;
   padding: 14px;
-  margin-top: 10px;
   margin-bottom: 10px;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
 }
 
 .categoryContent::-webkit-scrollbar{
@@ -28,7 +28,7 @@
 }
 
 .actions{
-  width: 77%;
+  width: 95%;
   display: flex;
   flex-direction: row;
   position: absolute;

@@ -1,17 +1,67 @@
 .myCard{
-    min-width: 350px;
-    min-height: 300px;
-    background-color: white;
-    border: 1px solid rgba(195, 195, 195, 0.162);
-    box-shadow: 3px 7px rgba(231, 231, 231, 0.247);
-    margin-left: 12px;
-    margin-right: 12px;
-    text-align: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+    flex-direction: column;
+    margin-left:16px;
+    margin-right:16px;
+    border: 1px solid rgba(222, 222, 222, 0.87);
+    border-radius: 12px;
+    height: fit-content;
+}
+
   .myCard:hover{
     cursor: pointer;
   }
+
+  .preview {
+      width: 100%;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      overflow: hidden;
+  }
+
+  .preview img {
+      background-color: black;
+      width: 100%;
+      height: 100%;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+  }
+
+  .title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 18px;
+  }
+
+  .title img {
+      width: 24px;
+      height: 24px;
+      margin-left: 5px;
+      margin-top: 2px;
+  }
+
+  .details {
+      min-width: 445px;
+      padding-top: 12px;
+      padding-left: 12px;
+      padding-right: 12px;
+  }
+
+  .description{
+      text-wrap: wrap;
+      padding-top:5px;
+  }
+
+  .footer {
+      display: flex;
+      flex-direction: row;
+      margin: 8px;
+  }
+
+  .footer div {
+      min-width: 40px;
+      padding: 4px 8px;
+      margin-left: 3px;
+  }
+
