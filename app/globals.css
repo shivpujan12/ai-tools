@@ -1,10 +1,23 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body{
-  background-color: #ebebeb5f;
+  background-color: #f5f5f5;
   scroll-behavior: smooth;
 }
 
-.main{
-  display: flex;
-  flex-direction: row;
+.slider-container {
+  margin-top:10px;
+  margin-left: 40px;
+  margin-right: 40px;
+  background: #f5f5f5;
+
 }
 
+.slick-next::before, .slick-prev::before {
+  content: none;
+}

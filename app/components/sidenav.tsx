@@ -13,9 +13,8 @@ export default async function SideNav() {
                     data.map((d: any, i: any) => {
                         console.log(Object.values(d));
                         return (
-                            <div key={i} className={`${styles.category} mb-3`}><Link
-                                className="text-decoration-none text-black"
-                                href={`#${Object.keys(d)}`}>{Object.keys(d)}</Link></div>
+                            <div key={i} className={`${styles.category}`}>
+                                <Link href={`#${Object.keys(d)}`}>{Object.keys(d)}</Link></div>
                         )
                     })
                 }

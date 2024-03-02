@@ -16,9 +16,8 @@ export default function MyCard({data}: { data: Tool }) {
                 {/*<Image alt="preview" width="100" height="100" src="/ai-photo-wizard.webp" />*/}
             </div>
             <div className={`${style.details}`}>
-                <div className={`fw-bold ${style.title}`}>
-                    <div className={``}>{title}</div>
-                    <Image width={100} height={100} src={'/link_open_icon.svg'} alt={"open in browser"}/>
+                <div className={`mt-2 fw-bold ${style.title}`}>
+                    {title} <Image width={100} height={100} src={'/link_open_icon.svg'} alt={"open in browser"}/>
                 </div>
                 <div className={`${style.description}`}><LinesEllipsis
                     text={desc}
@@ -30,9 +29,9 @@ export default function MyCard({data}: { data: Tool }) {
                 <span className={``} style={{color: "#05848d"}}>Read more</span>
             </div>
             <div className={`${style.footer}`}>
-                <div className={`border rounded-pill`}>Free</div>
-                <div className={`border rounded-pill`}>Trial available</div>
-                <div className={`border rounded-pill`}>Premium</div>
+                <div className={`border rounded-full`}>Free</div>
+                <div className={`border rounded-full`}>Trial available</div>
+                <div className={`border rounded-full`}>Premium</div>
             </div>
         </div>
     );

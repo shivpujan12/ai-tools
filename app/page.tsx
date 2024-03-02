@@ -1,8 +1,7 @@
-import Image from "next/image";
 import style from "./page.module.css";
-import NavBar from "./components/navbar";
-import { unstable_noStore as noStore } from "next/cache";
-import Category, { Tool } from "./components/category";
+import {unstable_noStore as noStore} from "next/cache";
+import Category from "./components/category";
+import SideNav from "@/app/components/sidenav";
 
 export default async function Home() {
   noStore();
@@ -10,15 +9,18 @@ export default async function Home() {
   const data = await req.json();
 
   return (
-    <div className={style.main}>
-      {data.map((d: any, i: any) => {
-        return (
-          <div  key={i}>
-            <Category title={Object.keys(d)} data={Object.values(d)} />
-          </div>
-        );
-      })}
-    </div>
+      <>
+        <SideNav/>
+        <div className={style.pageContent}>
+          {data.map((d: any, i: any) => {
+            return (
+              <div  key={i}>
+                <Category title={Object.keys(d)} data={Object.values(d)} />
+              </div>
+            );
+          })}
+        </div>
+      </>
   );
 }
 
