@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import MyImageComponent from "@/app/components/MyImageComponent";
+import Image from 'next/image';
 
 function LinkPreview({ url, handleTitle, handleDesc  }) {
     const [previewData, setPreviewData] = useState(null);
@@ -33,13 +34,18 @@ function LinkPreview({ url, handleTitle, handleDesc  }) {
         return <p>Loading...</p>;
     }
 
-    if (!previewData) {
-        return <p>Failed to fetch link preview.</p>;
-    }
-
     const handleClick = () => {
         window.open(url, '_blank');
     };
+
+    if (!previewData) {
+        return (<div onClick={handleClick}  style={{ cursor: 'pointer' }}><Image alt="404"
+                      width={500}
+                      height={200}  src={"/404-error-image.jpg"}/>
+        </div>);
+    }
+
+
 
     return (
         <div onClick={handleClick} style={{ cursor: 'pointer' }}>
