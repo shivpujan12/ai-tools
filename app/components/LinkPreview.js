@@ -40,8 +40,8 @@ function LinkPreview({ url, handleTitle, handleDesc  }) {
 
     if (!previewData) {
         return (<div onClick={handleClick}  style={{ cursor: 'pointer' }}><Image alt="404"
-                      width={500}
-                      height={200}  src={"/404-error-image.jpg"}/>
+                      width={1200}
+                      height={1200}  src={"/404.jpeg"}/>
         </div>);
     }
 
