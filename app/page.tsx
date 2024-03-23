@@ -2,11 +2,12 @@ import style from "./page.module.css";
 import {unstable_noStore as noStore} from "next/cache";
 import Category from "./components/category";
 import SideNav from "@/app/components/sidenav";
+import data from "@/app/data.json";
 
 export default async function Home() {
   noStore();
-  const req = await fetch(`http://localhost:3000/data.json`);
-  const data = await req.json();
+  /*const req = await fetch(`http://localhost:3000/data.json`);
+  const data = await req.json();*/
 
   return (
       <>

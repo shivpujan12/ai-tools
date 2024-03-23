@@ -1,11 +1,11 @@
 import Link from "next/link";
 import styles from "../styles/sidnav.module.css";
 import {unstable_noStore as noStore} from 'next/cache';
-
+import data from "@/app/data.json";
 export default async function SideNav() {
     noStore();
-    const req = await fetch(`http://localhost:3000/data.json`);
-    const data = await req.json();
+    /*const req = await fetch(`http://localhost:3000/data.json`);
+    const data = await req.json();*/
     return (
         <div className={`${styles.sideNav} border`}>
             <div>
