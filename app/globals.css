@@ -21,3 +21,7 @@ body{
 .slick-next::before, .slick-prev::before {
   content: none;
 }
+
+.hidden{
+  display: none;
+}

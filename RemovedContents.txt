@@ -1,0 +1,28 @@
+
+page.tsx
+
+export default function Home() {
+
+// noStore();
+  /*const req = await fetch(`http://localhost:3000/data.json`);
+  const data = await req.json();*/
+
+return (
+
+<>
+        {/*<SideNav/>*/}
+        {/*<div className={style.pageContent}>
+          {data.map((d: any, i: any) => {
+            return (
+              <div  key={i}>
+                <Category title={Object.keys(d)} data={Object.values(d)} />
+              </div>
+            );
+          })}
+        </div>*/}
+        <></>
+        <NavSection/>
+    </>
+
+    )
+    }

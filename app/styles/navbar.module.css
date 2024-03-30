@@ -2,17 +2,19 @@
 
 .navbar {
     width: 100%;
-    position: fixed;
-    z-index: 1;
-    font-family: 'Onest', sans-serif;
     display:  flex;
     flex-direction: row;
     align-items: center;
     background: white;
+    border: 1px  solid red;
 }
 
 .logo {
-    width: 10%
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .search {

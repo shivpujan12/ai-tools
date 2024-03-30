@@ -11,7 +11,7 @@ export default async function Home() {
 
   return (
       <>
-        <SideNav/>
+        {/*<SideNav/>*/}
         <div className={style.pageContent}>
           {data.map((d: any, i: any) => {
             return (
