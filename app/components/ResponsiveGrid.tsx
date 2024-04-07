@@ -20,7 +20,7 @@ export default function ResponsiveGrid() {
                         {/*<Item>*/}
                         <MyCard data={{
                             "name": "chatgptbot",
-                            "link": "https://osum.com/?utm_source=topai.tools&utm_medium=website_topai&utm_campaign=topai.tools",
+                            "link": "https://chat.tune.app/?utm_source=topai.tools&utm_medium=website_topai&utm_campaign=topai.tools",
                             "description": "",
                             "icon": ""
                         }}/>

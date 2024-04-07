@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import MyImageComponent from "@/app/components/MyImageComponent";
 import Image from 'next/image';
 
+export const baseURL = new URL(window.location.href).host;
+
 function LinkPreview({ url, handleTitle, handleDesc  }) {
     const [previewData, setPreviewData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -9,14 +11,8 @@ function LinkPreview({ url, handleTitle, handleDesc  }) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(url);
-                const data = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(data, 'text/html');
-                const title = doc.querySelector('title')?.textContent || '';
-                const description = doc.querySelector('meta[name="description"]')?.getAttribute('content') || '';
-                const image = doc.querySelector('meta[property="og:image"]')?.getAttribute('content') || '';
-
+                const response = await fetch(baseURL + '/api/link-preview/?link=' + url).then(res => res.json());
+                const {title ,description, image} = response;
                 setPreviewData({ title, description, image });
                 handleTitle(title);
                 handleDesc(description);
