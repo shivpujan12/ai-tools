@@ -1,15 +1,37 @@
 .container {
-    padding-top: 40px;
-    padding-left: 32px;
-    padding-right: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 32px 32px;
+    width: 100%;
+    gap: 20px;
+}
+
+.contentContainer {
+    width: 50%;
 }
 
 .greet {
     font-size: 32px;
-    padding-bottom: 24px;
 }
 
 .content {
     font-size: 24px;
     font-weight: 300;
 }
+
+.bannerContainer {
+
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+    .contentContainer{
+        width: 100%;
+        padding-bottom: 32px;
+    }
+}
+

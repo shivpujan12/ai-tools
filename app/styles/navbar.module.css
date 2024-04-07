@@ -5,8 +5,7 @@
     display:  flex;
     flex-direction: row;
     align-items: center;
-    background: white;
-    border: 1px  solid red;
+    justify-content: space-between;
 }
 
 .logo {
@@ -40,4 +39,19 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.rightSection{
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #535353;
+}
+
+.rightSection div:hover {
+    color: black;
+    font-weight: 400;
 }
