@@ -9,8 +9,8 @@ import Slider from "react-slick";
 export interface Tool {
   name: string;
   link: string;
-  description: string;
-  icon: string;
+  // description: string;
+  // icon: string;
 }
 
 export default function Category(props: any) {
