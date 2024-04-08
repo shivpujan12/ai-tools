@@ -13,7 +13,7 @@ export default function ResponsiveGrid() {
     }
 
     const [toolData , setToolData] = useState<ToolDataType[]>();
-    const baseURL = "http://" + new URL(window.location.href).host;
+    const baseURL = "https://" + new URL(window.location.href).host;
     useEffect(() => {
         const fetchData = async () => {
             try{

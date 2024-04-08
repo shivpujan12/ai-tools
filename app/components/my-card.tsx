@@ -10,7 +10,7 @@ import MyImageComponent from "@/app/components/MyImageComponent";
 
 export default function MyCard({data}: { data: Tool }) {
 
-    const baseURL = "http://" + new URL(window.location.href).host;
+    const baseURL = "https://" + new URL(window.location.href).host;
 
     const [webContent, setWebContent] = useState({title: "", description: "", image: "",logo: ""});
     const {link} = data;
