@@ -6,8 +6,26 @@
     "icon": ""
   },
   {
-    "name": "chatgpt",
-    "link": "https://chat.tune.app/?utm_source=topai.tools&utm_medium=website_topai&utm_campaign=topai.tools",
+    "name": "kuki",
+    "link": "https://www.kuki.ai",
+    "description": "As the name suggests it is has very quirky reply with multiple modal option.",
+    "icon": ""
+  },
+  {
+    "name": "lovedroids",
+    "link": "https://www.lovedroids.com",
+    "description": "",
+    "icon": ""
+  },
+  {
+    "name": "eliza",
+    "link": "http://www.med-ai.com/models/eliza.html",
+    "description": "it just asks questions",
+    "icon": ""
+  },
+  {
+    "name": "pephop",
+    "link": "https://pephop.ai",
     "description": "",
     "icon": ""
   },
