@@ -1,12 +1,11 @@
 'use client';
 import style from "./page.module.css";
-import Category from "./components/category";
 import data from "@/app/data.json";
-import IntroSection from "@/app/components/IntroSection";
+import Intro from "@/app/components/intro";
 import {Autocomplete, Divider, TextField} from "@mui/material";
 import Box from "@mui/material/Box";
 import {white} from "next/dist/lib/picocolors";
-import ResponsiveGrid from "@/app/components/ResponsiveGrid";
+import ToolsGrid from "@/app/components/tools-grid";
 import NavBar from "@/app/components/navbar";
 import {AutoAwesomeMosaic, AutoAwesomeMosaicRounded, AutoAwesomeMosaicTwoTone, AutoStories} from "@mui/icons-material";
 
@@ -18,8 +17,9 @@ export default function Home() {
       <div className={`width100pc`}>
       <div className={`${style.container}`}>
           <NavBar/>
-          <IntroSection />
+          <Intro />
           <Divider />
+          {/*Search box mobile*/}
           <div className={`${style.searchBox}`}>
               <div>
               <Autocomplete
@@ -41,7 +41,7 @@ export default function Home() {
               </div>
           </div>
           <div className={`${style.main}`}>
-              <ResponsiveGrid />
+              <ToolsGrid />
           </div>
         {/*<SideNav/>*/}
         {/*<div className={style.pageContent}>

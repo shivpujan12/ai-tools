@@ -1,11 +1,10 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import MyCard from "@/app/components/my-card";
+import ToolsCard from "@/app/components/tools-card";
 import {useEffect, useState} from "react";
-import {Tool} from "@/app/components/category";
 
-export default function ResponsiveGrid() {
+export default function ToolsGrid() {
 
     type ToolDataType = {
         name : string,
@@ -13,7 +12,7 @@ export default function ResponsiveGrid() {
     }
 
     const [toolData , setToolData] = useState<ToolDataType[]>();
-    const baseURL = "https://" + new URL(window.location.href).host;
+    const baseURL = "http://" + new URL(window.location.href).host;
     useEffect(() => {
         const fetchData = async () => {
             try{
@@ -33,7 +32,7 @@ export default function ResponsiveGrid() {
                 {
                     toolData?.map((item,index)=>(
                         <Grid item xs={4} sm={4} md={4} key={index}>
-                            <MyCard data={{
+                            <ToolsCard data={{
                                 "name": item.name,
                                 "link": item.link,
                             }}/>

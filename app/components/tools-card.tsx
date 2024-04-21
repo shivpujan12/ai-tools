@@ -1,16 +1,20 @@
-import {Tool} from "./category";
 import style from "../styles/mycards.module.css"
 import React, {useEffect, useState} from "react";
 import {Card, CardContent, CardMedia} from "@mui/material";
 import Image from "next/image";
 import LinesEllipsis from "react-lines-ellipsis";
 import Typography from "@mui/material/Typography";
-import {baseURL} from "@/app/components/LinkPreview";
-import MyImageComponent from "@/app/components/MyImageComponent";
 
-export default function MyCard({data}: { data: Tool }) {
+export interface Tool {
+    name: string;
+    link: string;
+    // description: string;
+    // icon: string;
+}
 
-    const baseURL = "https://" + new URL(window.location.href).host;
+export default function ToolsCard({data}: { data: Tool }) {
+
+    const baseURL = "http://" + new URL(window.location.href).host;
 
     const [webContent, setWebContent] = useState({title: "", description: "", image: "",logo: ""});
     const {link} = data;
