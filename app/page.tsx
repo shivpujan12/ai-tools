@@ -14,9 +14,9 @@ export default function Home() {
   const data = await req.json();*/
 
   return (
-      <div className={`width100pc`}>
+      <div>
       <div className={`${style.container}`}>
-          {/*<NavBar/>*/}
+          <NavBar/>
           <Intro />
           <Divider />
           {/*Search box mobile*/}
