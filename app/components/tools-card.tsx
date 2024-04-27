@@ -1,4 +1,4 @@
-import style from "../styles/mycards.module.css"
+import style from "../styles/tools-cards.module.css"
 import React, {useEffect, useState} from "react";
 import {Card, CardContent, CardMedia} from "@mui/material";
 import Image from "next/image";

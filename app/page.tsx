@@ -16,7 +16,7 @@ export default function Home() {
   return (
       <div className={`width100pc`}>
       <div className={`${style.container}`}>
-          <NavBar/>
+          {/*<NavBar/>*/}
           <Intro />
           <Divider />
           {/*Search box mobile*/}
@@ -43,16 +43,6 @@ export default function Home() {
           <div className={`${style.main}`}>
               <ToolsGrid />
           </div>
-        {/*<SideNav/>*/}
-        {/*<div className={style.pageContent}>
-          {data.map((d: any, i: any) => {
-            return (
-              <div  key={i}>
-                <Category title={Object.keys(d)} data={Object.values(d)} />
-              </div>
-            );
-          })}
-        </div>*/}
       </div>
       </div>
   );

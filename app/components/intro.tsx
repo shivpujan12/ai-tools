@@ -1,4 +1,4 @@
-import style from "../styles/introsection.module.css"
+import style from "../styles/intro.module.css"
 import * as React from 'react';
 import {useEffect, useState} from "react";
 
