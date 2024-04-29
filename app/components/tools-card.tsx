@@ -4,49 +4,21 @@ import {Card, CardContent, CardMedia} from "@mui/material";
 import Image from "next/image";
 import LinesEllipsis from "react-lines-ellipsis";
 import Typography from "@mui/material/Typography";
+import {useRouter} from "next/navigation";
+import {Tool} from "@/app/api/get-data/route";
 
-export interface Tool {
-    name: string;
-    link: string;
-    // description: string;
-    // icon: string;
-}
 
-export default function ToolsCard({data}: { data: Tool }) {
 
-    const baseURL = "http://" + new URL(window.location.href).host;
 
-    const [webContent, setWebContent] = useState({title: "", description: "", image: "",logo: ""});
-    const {link} = data;
-    const [loading, setLoading] = useState(true);
+export default function ToolsCard({tool}: { tool?: Tool }) {
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                console.log(baseURL + '/api/link-preview/?link=' + link)
-                const response = await fetch(baseURL + '/api/link-preview/?link=' + link).then(res => res.json());
-                console.log(response);
-                const {title, description, image,logo} = response;
-                setWebContent({title, description, image,logo});
-                setLoading(false);
-            } catch (error) {
-                console.error(error);
-                setLoading(false);
-            }
-        };
-
-        fetchData();
-    }, [link]);
-
-    if (loading) {
-        return <p>Loading...</p>;
-    }
+    const router = useRouter();
 
     const handleClick = () => {
-        window.open(link, '_blank');
+        window.open(tool?.link, '_blank');
     };
 
-    if (!webContent) {
+    if (!tool) {
         return (<div onClick={handleClick} style={{cursor: 'pointer'}}>
             <Image alt="404"
                    width={1200} height={1200}
@@ -55,13 +27,13 @@ export default function ToolsCard({data}: { data: Tool }) {
     }
 
     return (
-        <Card className={`${style.container} rounded`}>
-            <CardMedia className={``} component={'img'} image={webContent.image}/>
+        <Card className={`${style.container} rounded`} onClick={()=>router.push('/' + tool.title)}>
+            <CardMedia className={``} component={'img'} image={tool.image}/>
             <CardContent className={`p-4`}>
                 <div className={`${style.title}`}>
                     {/*<MyImageComponent width={24} height={24} alt={'icon'} className={``} src={webContent.logo}/>*/}
                     <div>
-                        <h6>{webContent.title}</h6>
+                        <h6>{tool.title}</h6>
                     </div>
                 </div>
                 <Typography sx={{mb: 1}} color="text.secondary">
@@ -69,7 +41,7 @@ export default function ToolsCard({data}: { data: Tool }) {
                 </Typography>
                 <Typography sx={{mb: 1}} variant="body2" color="text.secondary">
                     <LinesEllipsis
-                        text={webContent.description}
+                        text={tool.description}
                         maxLine='2'
                         ellipsis='...'
                         trimRight
