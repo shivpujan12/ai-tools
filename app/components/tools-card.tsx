@@ -7,9 +7,6 @@ import Typography from "@mui/material/Typography";
 import {useRouter} from "next/navigation";
 import {Tool} from "@/app/api/get-data/route";
 
-
-
-
 export default function ToolsCard({tool}: { tool?: Tool }) {
 
     const router = useRouter();

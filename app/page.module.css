@@ -1,8 +1,14 @@
+.page{
+  /*width: 50% !important;*/
+  /*margin: auto;*/
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 1080px;
+  margin: auto;
 }
 
 .pageContent{
