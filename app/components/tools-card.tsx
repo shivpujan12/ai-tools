@@ -1,6 +1,6 @@
 import style from "../styles/tools-cards.module.css"
-import React, {useEffect, useState} from "react";
-import {Card, CardContent, CardMedia} from "@mui/material";
+import React from "react";
+import {Card, CardContent, CardMedia, Chip} from "@mui/material";
 import Image from "next/image";
 import LinesEllipsis from "react-lines-ellipsis";
 import Typography from "@mui/material/Typography";
@@ -10,6 +10,8 @@ import {Tool} from "@/app/api/get-data/route";
 export default function ToolsCard({tool,pos}: { tool?: Tool,pos:number}) {
 
     const router = useRouter();
+
+    console.log("Tools Data: ", tool);
 
     const handleClick = () => {
         if(tool?.link && tool?.link!=='not found') {
@@ -32,7 +34,9 @@ export default function ToolsCard({tool,pos}: { tool?: Tool,pos:number}) {
               onClick={handleClick}
             /*onClick={()=>router.push('/' + tool.title+ "?pos="+ pos)}*/
         >
-            <CardMedia className={``} component={'img'} image={tool.image}/>
+            {tool.image ? <CardMedia className={``} component={'img'} image={tool.image}/> :
+                <CardMedia className={``} component={'img'} image={`/placeholder.png`}/>}
+
             <CardContent className={`p-4`}>
                 <div className={`${style.title}`}>
                     {/*<MyImageComponent width={24} height={24} alt={'icon'} className={``} src={webContent.logo}/>*/}
@@ -53,7 +57,12 @@ export default function ToolsCard({tool,pos}: { tool?: Tool,pos:number}) {
                     />
                 </Typography>
                 <Typography sx={{mb: 1}} color="text.secondary">
-                    Tags
+                    {
+                        tool.tags?.map((item, index): any => {
+                            return <Chip label={item} key={index}/>
+                        })
+                    }
+
                 </Typography>
             </CardContent>
         </Card>

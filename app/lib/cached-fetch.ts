@@ -27,7 +27,7 @@ const useCachedFetch = (url:string) => {
             }
         }
 
-        // Check if data exists in local storage first (optional)
+        // Check if data exists in local storage first
         const cachedData = localStorage.getItem('my-cached-data');
         if (cachedData) {
             setData(JSON.parse(cachedData));

@@ -1,72 +1,87 @@
 [
   {
-    "name": "Replika bot",
+    "title": "Replika bot",
     "link": "https://replika.ai",
     "description": "",
-    "icon": ""
+    "icon": "",
+    "tags": ["freemium","free","Trial","#Chatbot"],
+    "SEOToggle": true
   },
   {
-    "name": "kuki",
+    "title": "kuki",
     "link": "https://www.kuki.ai",
     "description": "As the name suggests it is has very quirky reply with multiple modal option.",
-    "icon": ""
+    "icon": "",
+    "SEOToggle": false,
+    "image": "https://images.squarespace-cdn.com/content/v1/5e7eaf7501b2e061b53d2525/bea96e68-d33a-4e2c-9515-d8616dc73c4c/AI_Tools_illustration_in_the_style_of_buzzfeed_magazi_c8b3a492-e67d-4243-aba2-f847e9702414.png"
   },
   {
-    "name": "lovedroids",
+    "title": "lovedroids",
     "link": "https://www.lovedroids.com",
     "description": "",
-    "icon": ""
+    "icon": "",
+    "SEOToggle": true
   },
   {
-    "name": "eliza",
+    "title": "eliza",
     "link": "http://www.med-ai.com/models/eliza.html",
     "description": "it just asks questions",
-    "icon": ""
+    "icon": "",
+    "SEOToggle": true
   },
   {
-    "name": "pephop",
+    "title": "pephop",
     "link": "https://pephop.ai",
     "description": "",
-    "icon": ""
+    "icon": "",
+    "SEOToggle": true
   },
   {
-    "name": "chatgpt",
+    "title": "chatgpt",
     "link": "https://osum.com/?utm_source=topai.tools&utm_medium=website_topai&utm_campaign=topai.tools",
     "description": "",
-    "icon": ""
+    "icon": "",
+    "SEOToggle": true
   },
   {
-    "name": "ProWritingAid",
-    "link": "https://prowritingaid.com/"
+    "title": "ProWritingAid",
+    "link": "https://prowritingaid.com/",
+    "SEOToggle": true
   },
   {
-    "name": "chatgptbot",
+    "title": "chatgptbot",
     "link": "https://www.camp.to/?utm_source=topai.tools&utm_medium=website_topai&utm_campaign=topai.tools",
     "description": "",
-    "icon": ""
+    "icon": "",
+    "SEOToggle": true
   },
   {
-    "name": "chatgpt",
+    "title": "chatgpt",
     "link": "https://chat.tune.app/?utm_source=topai.tools&utm_medium=website_topai&utm_campaign=topai.tools",
     "description": "",
-    "icon": ""
+    "icon": "",
+    "SEOToggle": true
   },
   {
-    "name": "chatgpt",
+    "title": "chatgpt",
     "link": "https://osum.com/?utm_source=topai.tools&utm_medium=website_topai&utm_campaign=topai.tools",
     "description": "",
-    "icon": ""
+    "icon": "",
+    "SEOToggle": true
   },
   {
-    "name": "ProWritingAid",
-    "link": "https://prowritingaid.com/"
+    "title": "ProWritingAid",
+    "link": "https://prowritingaid.com/",
+    "SEOToggle": true
   },
   {
-    "name": "Jasper",
-    "link": "https://www.jasper.ai/"
+    "title": "Jasper",
+    "link": "https://www.jasper.ai/",
+    "SEOToggle": true
   },
   {
-    "name": "copyai",
-    "link": "https://www.copy.ai/"
+    "title": "copyai",
+    "link": "https://www.copy.ai/",
+    "SEOToggle": true
   }
 ]

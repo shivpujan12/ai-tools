@@ -9,13 +9,15 @@ export interface Tool {
     image?:string,
     logo?:string,
     link?:string,
+    tags?:string[],
+    SEOToggle?:boolean
 }
 
 
 export async function GET(req: Request) {
     const result: Tool[] = [];
     try {
-        const listOfPromise = data.map((item) => fetchData(item.link));
+        const listOfPromise = data.map((item:Tool) => fetchData(item));
         const fetchedData = await Promise.all(listOfPromise);
         fetchedData.forEach((item) => {
             result.push({
@@ -24,6 +26,7 @@ export async function GET(req: Request) {
                 description: item.description,
                 logo: item.logo,
                 link: item.link,
+                tags: item.tags,
             });
         });
         return NextResponse.json(result);
@@ -34,33 +37,54 @@ export async function GET(req: Request) {
 }
 
 
-const fetchData = async (link: string) => {
-    try {
-        const url = link || '';
-        const html = await fetch(url).then(res => res.text());
-        const $ = cheerio.load(html);
-        const title = getMetaRag($, "title")
-        const image = getMetaRag($, "image");
-        const description = getMetaRag($, "description");
-        const logo = getFavicon($);
-        let finalLogo = "";
-        if (logo?.includes('http')) {
-            finalLogo = logo;
-        } else {
-            finalLogo = "https://" + new URL(link || '').host + logo;
-        }
-        return {
-            title: title,
-            image: image,
-            description: description,
-            logo: finalLogo,
-            link: link,
-        }
+const fetchData = async (item:Tool) => {
+   const link = item.link;
+   const SEO = item.SEOToggle;
+   if(SEO) {
+       try {
+           const url = link || '';
+           const html = await fetch(url).then(res => res.text());
+           const $ = cheerio.load(html);
+           const title = getMetaRag($, "title")
+           const image = getMetaRag($, "image");
+           const description = getMetaRag($, "description");
+           const logo = getFavicon($);
+           let finalLogo = "";
+           if (logo?.includes('http')) {
+               finalLogo = logo;
+           } else {
+               finalLogo = "https://" + new URL(link || '').host + logo;
+           }
+           return {
+               title: title,
+               image: image,
+               description: description,
+               logo: finalLogo,
+               link: link,
+               tags: item.tags
+           }
 
-    } catch (error) {
-        console.error("Error: ", error);
-        return {"link": "not found"};
-    }
+       } catch (error) {
+           console.error("Error: ", error);
+           return {
+               title: item.title,
+               image: item.image,
+               description: item.description,
+               logo: item.logo,
+               link: item.link,
+               tags: item.tags,
+           };
+       }
+   } else {
+       return {
+           title: item.title,
+           image: item.image,
+           description: item.description,
+           logo: item.logo,
+           link: item.link,
+           tags: item.tags,
+       };
+   }
 }
 
 
