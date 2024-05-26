@@ -1,9 +1,21 @@
 'use client';
-export default function ToolDetails(){
+import {Tool} from "@/app/api/get-data/route";
 
-    const cachedData = localStorage.getItem('my-cached-data');
+export default function ToolDetails({searchParams}:any){
+
+
+    const cachedData = localStorage.getItem('my-cached-data') || '';
+    let data : Tool = JSON.parse(cachedData)[searchParams.pos];
 
     return (
-        cachedData ? <div>Data is available</div> : <div>Data is not Available</div>
+        cachedData ? (
+            <div>
+                <div>
+                    {data.title}
+                </div>
+            </div>
+
+            )
+            : <div>Data is not Available</div>
     )
 }

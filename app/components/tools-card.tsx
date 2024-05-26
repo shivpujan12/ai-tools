@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import {useRouter} from "next/navigation";
 import {Tool} from "@/app/api/get-data/route";
 
-export default function ToolsCard({tool}: { tool?: Tool }) {
+export default function ToolsCard({tool,pos}: { tool?: Tool,pos:number}) {
 
     const router = useRouter();
 
@@ -24,7 +24,7 @@ export default function ToolsCard({tool}: { tool?: Tool }) {
     }
 
     return (
-        <Card className={`${style.container} rounded`} onClick={()=>router.push('/' + tool.title)}>
+        <Card className={`${style.container} rounded`} onClick={()=>router.push('/' + tool.title+ "?pos="+ pos)}>
             <CardMedia className={``} component={'img'} image={tool.image}/>
             <CardContent className={`p-4`}>
                 <div className={`${style.title}`}>

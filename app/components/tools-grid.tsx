@@ -12,7 +12,7 @@ export default function ToolsGrid({data}:{data?:Tool[]}) {
                 {
                     data?.map((item,index)=>(
                         <Grid item xs={4} sm={4} md={4} key={index}>
-                            <ToolsCard tool={item}/>
+                            <ToolsCard tool={item} pos = {index}/>
                         </Grid>
                     ))
                 }
