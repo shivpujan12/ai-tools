@@ -19,7 +19,7 @@ export default function Home() {
                 <Intro/>
                 <Divider/>
                 {/*Search box mobile*/}
-                <div className={`${style.searchBox}`}>
+                {/*<div className={`${style.searchBox}`}>
                     <div>
                         <Autocomplete
                             disablePortal
@@ -38,7 +38,7 @@ export default function Home() {
                     <div className={`${style.categoriesIcon}`}>
                         <AutoAwesomeMosaicTwoTone/>
                     </div>
-                </div>
+                </div>*/}
                 <div className={`${style.main}`}>
                     <ToolsGrid data={data} />
                 </div>
