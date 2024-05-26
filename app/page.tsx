@@ -10,7 +10,7 @@ import useCachedFetch from "@/app/lib/cached-fetch";
 
 export default function Home() {
 
-    const baseURL = "http://" + new URL(window.location.href).host;
+    const baseURL = "https://" + new URL(window.location.href).host;
     const { data, isLoading, error } = useCachedFetch(baseURL + "/api/get-data");
     return (
         <div className={`${style.page}`}>
