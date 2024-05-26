@@ -12,7 +12,11 @@ export default function ToolsCard({tool,pos}: { tool?: Tool,pos:number}) {
     const router = useRouter();
 
     const handleClick = () => {
-        window.open(tool?.link, '_blank');
+        if(tool?.link && tool?.link!=='not found') {
+            window.open(tool?.link, '_blank');
+        } else {
+            alert('Oops!, looks like the website is not available')
+        }
     };
 
     if (!tool) {
@@ -24,7 +28,10 @@ export default function ToolsCard({tool,pos}: { tool?: Tool,pos:number}) {
     }
 
     return (
-        <Card className={`${style.container} rounded`} onClick={()=>router.push('/' + tool.title+ "?pos="+ pos)}>
+        <Card className={`${style.container} rounded`}
+              onClick={handleClick}
+            /*onClick={()=>router.push('/' + tool.title+ "?pos="+ pos)}*/
+        >
             <CardMedia className={``} component={'img'} image={tool.image}/>
             <CardContent className={`p-4`}>
                 <div className={`${style.title}`}>
